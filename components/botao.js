@@ -33,23 +33,21 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').width / 4,
     width: Dimensions.get('window').width / 4,
     padding: 20,
-    backgroundColor: '#000',
-    color: '#fff',
-    borderWidth: 1,
-    borderColor: '#777',
+    backgroundColor: '#2ec4b6',
+    color: '#cbf3f0',
     textAlign: 'center',
   },
   btnIgual: {
-    color: '#f00',
+    color: '#38a3a5',
   },
   btnOperacao: {
-    color: '#0f0',
+    color: '#38a3a5',
   },
   btnAC: {
-    color: '#ff0',
+    color: '#38a3a5',
   },
   btnBS: {
-    color: '#0ff',
+    color: '#38a3a5',
   },
   btnDuplo: {
     color: '#',

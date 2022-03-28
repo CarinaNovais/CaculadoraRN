@@ -22,16 +22,16 @@ display:{
   padding:20,
   justifyContent:'center',
   alignItems:'flex-end',
-  backgroundColor:'#444',
+  backgroundColor:'#fff',
   width:'100%'
 },
 dspOper:{
 fontSize:35,
-color:'#fff',
+color:'#000',
 },
 dspRes:{
 fontSize:50,
-color:'#fff',
+color:'#000',
 },
 
   
