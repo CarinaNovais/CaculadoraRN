@@ -22,7 +22,6 @@ export default (props) => {
   return( 
     <TouchableHighlight onPress={props.aoClicar}>
     <Text style={estilosBotoes}>{props.label}</Text>
-  
     </TouchableHighlight>
   )
 };
