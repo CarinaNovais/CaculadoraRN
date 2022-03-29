@@ -6,6 +6,7 @@ import {
   Text,
   TouchableHighlight,
   TextInput,
+  TouchableOpacity
 } from 'react-native';
 
 import Display from './components/display';
@@ -23,7 +24,7 @@ export default function App() {
   const [vres, setVres] = useState(estados.resultado);
 
   const addDigito = (d) => {
-    if (d == '+' || d == '-' || d == '/' || d == '*') {
+    if (d == '+' || d == '-' || d == '/' || d == '*'|| d == '%'|| d == '^') {
       estados.ponto = false;
     }
     if (d == '.' && !estados.ponto) {
@@ -31,8 +32,9 @@ export default function App() {
       estados.operado = false;
     } else if (d == '.' && estados.ponto) {
       return;
+    
     }
-    if ((d == '+' || d == '-' || d == '/' || d == '*') && estados.operado) {
+    if ((d == '+' || d == '-' || d == '/' || d == '*'|| d == '%'|| d == '^') && estados.operado) {
       estados.valorTela = estados.resultado;
       estados.resultado = 0;
     }
@@ -71,7 +73,7 @@ export default function App() {
       estados.operado = true;
       setVres(estados.resultado);
       return;
-    } catch {
+   } catch {
       estados.resultado = 'Deu ruim';
       estados.operado = true;
       setVres(estados.resultado);
@@ -106,7 +108,12 @@ export default function App() {
           aoClicar={() => {
             addDigito('/');
           }}></Btn>
-
+         <Btn
+          label="^"
+          operacao
+          aoClicar={() => {
+            addDigito('**');
+          }}></Btn>
         <Btn
           label="7"
           aoClicar={() => {
@@ -177,6 +184,11 @@ export default function App() {
           label="0"
           aoClicar={() => {
             addDigito('0');
+          }}></Btn>
+          <Btn
+          label="00"
+          aoClicar={() => {
+            addDigito('00');
           }}></Btn>
         <Btn
           label="."
