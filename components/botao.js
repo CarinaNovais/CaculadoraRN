@@ -29,7 +29,7 @@ export default (props) => {
 
 const styles = StyleSheet.create({
   btn: {
-    fontSize: 30,
+    fontSize: 40,
     height: Dimensions.get('window').width / 4,
     width: Dimensions.get('window').width / 4,
     padding: 20,
@@ -38,7 +38,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   btnIgual: {
-    color: '#38a3a5',
+    color: '#cbf3f0',
+    textAlign:'center',
+    backgroundColor:'#218380',
+    height: (Dimensions.get('window').width / 4),
+    width: (Dimensions.get('window').width / 4) * 3
+
   },
   btnOperacao: {
     color: '#38a3a5',
